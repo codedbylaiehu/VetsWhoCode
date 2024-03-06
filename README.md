@@ -62,7 +62,7 @@ h1 {
 }
 ```
 
- 5 **Linking CCS to firstWebPage.html
+ 5 **Linking CCS to firstWebPage.html**
 
 > Inside of firstWebPage.html
 
