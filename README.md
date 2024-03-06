@@ -80,7 +80,7 @@ h1 {
 </html>
 ```
 
- 6 **Style the HTML document
+ 6 **Style the HTML document**
 
 ```
 body {
