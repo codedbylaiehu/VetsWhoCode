@@ -100,13 +100,91 @@ p {
 ```
 ### Javascript
 #### Preparing My Toolkit
-> For this exercise I'm choosing to use nvim instead of vscode because I enjoy the CLI environment more. There is a general lack of creature comforts but there are also less distraction. 
+
+> For this exercise I swapped between nvim and vscode and I'm finding myself less distracted by vscode than I was previously, specifically when writing markdown. A huge plus for vscode is the live-preview and plugin easy-of-use. nvim is great but to get the enironment fleshed out can take a bit of know-how.
+
 #### My First Javascript Code 
+
+> This little snippet of code helped me to understand so much more of js.
 ```
-<script>
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>My First JavaScript Code</title>
+  </head>
+  <body>
+    <button onclick="showMessage()">Click me</button>
+    <p id="message"></p>
+    <script>
       function showMessage() {
-        document.getElementById("message").innerHTML = "HELLO, WORLD!";
+        document.getElementById("message").innerHTML = "Hello, World!";
+      }
+    </script>
+  </body>
+</html>
+```
+
+> I challenged myself to make the next few sections interactive, aiming to use UI elements like buttons and text input boxes. First was concatenating some strings with other object types.
+
+```
+    <button onclick="showMessage2()">Get Joe's Info</button>
+    <p id="joe"></p>
+    <script>
+      var name = "Joe";
+      let age = 31;
+      const height = 71;
+      function showMessage2() {
+        document.getElementById("joe").innerHTML = "Name: " + name + ", " + "Age: " + age.toString() + ", " + "Height: " + height.toString() + "in.";
       }
     </script>
 ```
 
+> Next was running a conditional function within a button press AND without affecting the previous buttons or button presses.
+
+```
+    <p>Looks like we've got an 85 on our test.</p>
+    <button onclick="showMessage3()">Letter Grade</button>
+    <p id="grade"></p>
+    <script>
+      let score = 85;
+      function showMessage3() {
+        if (score >= 90) {
+          document.getElementById("grade").innerHTML = "A Grade";
+        } else if (score >= 80) {
+          document.getElementById("grade").innerHTML = "B Grade";
+        } else {
+          document.getElementById("grade").innerHTML = "C or Lower";
+        };
+      }
+    </script>
+```
+
+> After that I had to get creative and use a "for loop" inside of another button.
+
+```
+    <button onclick="showMessage4()">"For" Loop</button>
+    <p id="forLoop"></p>
+    <script>
+      function showMessage4() {
+        for (let i = 0; i < 5; i++) {
+        document.getElementById("forLoop").innerHTML = "Count: " + i.toString();
+        }
+      }
+    </script>
+```
+
+> The "while loop" was and will be an interesting challenge in rendering on the html page. I suspect I would have to use time instead of counts but I haven't figured a way to display the numbers counting up without modifying DOM
+
+```
+    <button onclick="showMessage5()">"While" Loop</button>
+    <p id="whileLoop"></p>
+    <script>
+      function showMessage5() {
+        let count = 0;
+        while (count < 100) {
+          document.getElementById("whileLoop").innerHTML = "looping... " + count.toString();
+          count++;
+        }
+      }
+    </script>
+```

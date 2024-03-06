@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>My First JavaScript Code</title>
+  </head>
+  <body>
+    <button onclick="showMessage()">Hello, Computer!</button>
+    <p id="message"></p>
+    <script>
+      function showMessage() {
+        document.getElementById("message").innerHTML = "Hello, World!";
+      }
+    </script>
+
+    <button onclick="showMessage2()">Get Joe's Info</button>
+    <p id="joe"></p>
+    <script>
+      var name = "Joe";
+      let age = 31;
+      const height = 71;
+      function showMessage2() {
+        document.getElementById("joe").innerHTML = "Name: " + name + ", " + "Age: " + age.toString() + ", " + "Height: " + height.toString() + "in.";
+      }
+    </script>
+
+    <p>Looks like we've got an 85 on our test.</p>
+    <button onclick="showMessage3()">Letter Grade</button>
+    <p id="grade"></p>
+    <script>
+      let score = 85;
+      function showMessage3() {
+        if (score >= 90) {
+          document.getElementById("grade").innerHTML = "A Grade";
+        } else if (score >= 80) {
+          document.getElementById("grade").innerHTML = "B Grade";
+        } else {
+          document.getElementById("grade").innerHTML = "C or Lower";
+        };
+      }
+    </script>
+
+    <button onclick="showMessage4()">"For" Loop</button>
+    <p id="forLoop"></p>
+    <script>
+      function showMessage4() {
+        for (let i = 0; i < 5; i++) {
+        document.getElementById("forLoop").innerHTML = "Count: " + i.toString();
+        }
+      }
+    </script>
+
+    <button onclick="showMessage5()">"While" Loop</button>
+    <p id="whileLoop"></p>
+    <script>
+      function showMessage5() {
+        let count = 0;
+        while (count < 100) {
+          document.getElementById("whileLoop").innerHTML = "looping... " + count.toString();
+          count++;
+        }
+      }
+    </script>
+  </body>
+</html>
