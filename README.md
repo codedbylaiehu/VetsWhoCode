@@ -173,7 +173,7 @@ p {
     </script>
 ```
 
-> The "while loop" was and will be an interesting challenge in rendering on the html page. I suspect I would have to use time instead of counts but I haven't figured a way to display the numbers counting up without modifying DOM
+> The "while loop" was and will be an interesting challenge in rendering on the html page. I suspect I would have to use time instead of counts but I haven't figured a way to display the numbers counting up without modifying DOM. I will eventually learn how to link to a local / repo JS file for including functions as thats how I assume some JS libraries and frameworks operate.
 
 ```
     <button onclick="showMessage5()">"While" Loop</button>
