@@ -6,8 +6,8 @@
 ### HTML and CSS
 #### Setting Up HQ
 
- 1 **Setting up** was a challenge because I have used vs code and git before, however I am no git pro yet and cloning / pushing changes to my pre-existing main was an exercise in memory and research. 
- 2 **Creating an HTML document**
+1. **Setting up** was a challenge because I have used vs code and git before, however I am no git pro yet and cloning / pushing changes to my pre-existing main was an exercise in memory and research. 
+2. **Creating an HTML document**
 
 ```
 $ touch firstWebPage.html
@@ -26,7 +26,7 @@ $ touch firstWebPage.html
 </html>
 ```
 
- 3 **Adding content to my HTML document**
+3. **Adding content to my HTML document**
 
 ```
 <h1>This is my first heading</h1>
@@ -48,7 +48,7 @@ $ touch firstWebPage.html
 </ul>
 ```
 #### Styling The Web
- 4 **Crafting CSS**
+4. **Crafting CSS**
 
 ```
 $ touch firstWebPageStyles.css
@@ -62,7 +62,7 @@ h1 {
 }
 ```
 
- 5 **Linking CCS to firstWebPage.html**
+5. **Linking CCS to firstWebPage.html**
 
 > Inside of firstWebPage.html
 
@@ -80,7 +80,7 @@ h1 {
 </html>
 ```
 
- 6 **Style the HTML document**
+6. **Style the HTML document**
 
 ```
 body {
@@ -188,3 +188,54 @@ p {
       }
     </script>
 ```
+
+> The rest of the JS segement such as operations, arrays, and objects were a bit more difficult but I kept all of the scope small, repeating code. I'll learn how to manipulate the object key-value pairs more but with my limited knowledge I was able to showcase JS coding on buttons.
+
+```
+    <button onclick="showMessage15()">person.["age"]</button>
+    <p id="personAge"></p>
+    <script>
+      function showMessage15() {
+        const person = {
+          name: "Jody",
+          age: 30,
+          gender: "male",
+          sayHello: function () {
+            console.log("Hello!");
+          },
+        };
+        document.getElementById("personAge").innerHTML = (person.age);
+      }
+    </script>
+```
+
+### Capstone
+
+####Why this matters to me
+> I've documented the entire process of going through the VWC prework in the hopes that anyone reading could benefit from the documention. I want my capstone site to reflect the spirit of helping others.
+
+7. #### Use prework skills to plan, wireframe, and build the capstone.
+```
+$ touch index.html
+$ touch styles.css
+$ touch script.js
+```
+8. #### Plan
+I'll be taking a Hero Page approach to the capstone with a motion logo. There should be displays of more code examples that I've done in the past like the following:
+
+https://laiehu.com
+
+https://codedbylaiehu.github.io/laiehuLearning/odin-recipes/
+
+https://codedbylaiehu.github.io/laiehuLearning/freeCodeCampTechDoc/
+
+> Opting to use still Gifs that move on hover for the link pictures showcasing the previous coding examples. I'm going to include my personal passions like instructing, music production, as well as reading and writing.
+
+9. #### Wireframe
+-- Page Title and Navbar -- \
+-- Hero Image -- \
+-- Code Examples -- \
+-- About the Author -- \
+-- Social Links --
+
+> Time to build!

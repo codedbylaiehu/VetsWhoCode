@@ -60,5 +60,134 @@
         }
       }
     </script>
+
+    <p>Math Operations</p>
+    <p>X = 5 | Y = 10</p>
+    <button onclick="showMessage6()">+</button>
+    <p id="answerSum"></p>
+    <script>
+      function showMessage6() {
+        let x = 5;
+        let y = 10;
+        let sum = x + y; // 15
+        document.getElementById("answerSum").innerHTML = sum.toString();
+      }
+    </script>
+
+    <button onclick="showMessage7()">-</button>
+    <p id="answerDifference"></p>
+    <script>
+      function showMessage7() {
+        let x = 5;
+        let y = 10;
+        let difference = y - x; // 5
+        document.getElementById("answerDifference").innerHTML = difference.toString();
+      }
+    </script>
+    
+    <button onclick="showMessage8()">*</button>
+    <p id="answerProduct"></p>
+    <script>
+      function showMessage8() {
+        let x = 5;
+        let y = 10;
+        let product = x * y; // 50
+        document.getElementById("answerProduct").innerHTML = product.toString();
+      }
+    </script>
+
+    <button onclick="showMessage9()">/</button>
+    <p id="answerQuotient"></p>
+    <script>
+      function showMessage9() {
+        let x = 5;
+        let y = 10;
+        let quotient = y / x; // 2
+        document.getElementById("answerQuotient").innerHTML = quotient.toString();
+      }
+    </script>
+
+    <p>Arrays</p>
+    <p>[1, 2, 3, 4, 5]</p>
+    <button onclick="showMessage10()">Index[2]</button>
+    <p id="array"></p>
+    <script>
+      function showMessage10() {
+        let numbers = [1, 2, 3, 4, 5];
+
+        document.getElementById("array").innerHTML = (numbers[2]).toString(); // Access the third element (3);
+      }
+    </script>
+
+    <button onclick="showMessage11()">array.length</button>
+    <p id="length"></p>
+    <script>
+      function showMessage11() {
+        let numbers = [1, 2, 3, 4, 5];
+        document.getElementById("length").innerHTML = (numbers.length).toString(); // Access the third element (3);
+      }
+    </script>
+
+    <button onclick="showMessage12()">array.reverse</button>
+    <p id="reverse"></p>
+    <script>
+    function showMessage12() {
+    let numbers = [1, 2, 3, 4, 5];
+    document.getElementById("reverse").innerHTML = (numbers.reverse()).toString(); // Access the third element (3);
+    }
+    </script>
+
+    <button onclick="showMessage13()">array.join(" | ")</button>
+    <p id="join"></p>
+    <script>
+    function showMessage13() {
+    let numbers = [1, 2, 3, 4, 5];
+    document.getElementById("join").innerHTML = (numbers.reverse()).join(" | ").toString(); // Access the third element (3);
+    }
+    </script>
+
+    <p>Object</p>
+    <p>
+      const person = { <br>
+        name: "Jody", <br>
+        age: 30, <br>
+        gender: "male", <br>
+        sayHello: function () { <br>
+          console.log("Hello!"); <br>
+        }, <br>
+      }; <br>
+      
+    </p>
+    <button onclick="showMessage14()">person.name</button>
+    <p id="personName"></p>
+    <script>
+      function showMessage14() {
+        const person = {
+          name: "Jody",
+          age: 30,
+          gender: "male",
+          sayHello: function () {
+            console.log("Hello!");
+          },
+        };
+        document.getElementById("personName").innerHTML = (person.name); // Access the third element (3);
+      }
+    </script>
+
+    <button onclick="showMessage15()">person.["age"]</button>
+    <p id="personAge"></p>
+    <script>
+      function showMessage15() {
+        const person = {
+          name: "Jody",
+          age: 30,
+          gender: "male",
+          sayHello: function () {
+            console.log("Hello!");
+          },
+        };
+        document.getElementById("personAge").innerHTML = (person.age); // Access the third element (3);
+      }
+    </script>
   </body>
 </html>
