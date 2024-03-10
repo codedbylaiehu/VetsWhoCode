@@ -25,28 +25,7 @@ BODY
 /* 
 TITLE + NAV BAR
 */
-section#titleNav {
-    margin-bottom: 12px;
-}
-
-nav {
-    position: absolute;
-    top: 1px;
-    right: 0;
-    left: 170px;
-    display: flex;
-    place-items: center;
-    height: 64px;
-    width: 100%;
-    margin: 0 auto;
-}
-
-nav button a {
-    text-decoration: none;
-    color: var(--c1);
-}
-
-body section {
+body header.titleNav {
     display: block;
     max-height: 100vh;
     max-width: 100vw;
@@ -61,14 +40,26 @@ body section {
     z-index: 100;
 }
 
-body section header img {
+body header img {
     display: block;
     position: relative;
     height: 60px;
     padding-bottom: 12px;
 }
 
-button {
+body header nav {
+    position: absolute;
+    top: 1px;
+    right: 0;
+    left: 170px;
+    display: flex;
+    place-items: center;
+    height: 64px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+body header button {
     position: relative;
     height: 50px;
     text-align: left;
@@ -80,12 +71,14 @@ button {
     border: 0px;
 }
 
-button:hover {
-    color: var(--c2);
-    background-image: radial-gradient(var(--c7), var(--c6));
+body header nav button a {
+    text-decoration: none;
+    color: var(--c1);
 }
 
-nav button a:hover {
+body header nav button:hover {
+    color: var(--c2);
+    background-image: radial-gradient(var(--c7), var(--c6));
     text-decoration: none;
 }
 
@@ -94,10 +87,7 @@ CONTENT SECTION
 */
 body section.content {
     display: block;
-    max-height: 100%;
-    max-width: 100%;
     margin-bottom: 3vh;
-    padding: 2vw 2vh;
 
     background-color: var(--c2) !important;
 
@@ -105,56 +95,45 @@ body section.content {
     -moz-box-shadow: 0 4px 12px 0 rgba(0,0,0,.05);
     -ms-box-shadow: 0 4px 12px 0 rgba(0,0,0,.05);
     box-shadow: 0 4px 12px 0 rgb(0 0 0 / 5%);
-    z-index: 100;
+    z-index: 99;
 }
 
-body section div {
-    display: block;
-}
-
-#faux-gif {
-    display: block;
-	position: absolute;
-	top: 0; left: 3vw; right: 0; bottom: 0;
+body div img#faux-gif {
+    position: sticky;
+	top: 0; left: 2vw; right: 0; bottom: 2vh;
 	margin: auto;
-    background-repeat: no-repeat;
-	background-position: left;
-    background-attachment: local;
-	width: 100%;
-    padding-left: 10vw;
+	width: 500px;
     
-	animation: giffy .85s infinite steps(1);
+	animation: giffy 1s infinite steps(1);
 }
 
-#faux-gif:hover {
+body div img#faux-gif:hover {
 	animation-play-state:paused;
 }
 
 @keyframes giffy {
-	0%   { background-image: url('https://design.laiehu.com/assets/images/gallery01/47fdcae1_original.jpg?v=1d38c1c2'); } 
-	15%  { background-image: url('https://design.laiehu.com/assets/images/gallery01/215e6f7b_original.jpg?v=1d38c1c2'); }
-	20%  { background-image: url('https://design.laiehu.com/assets/images/gallery01/66869e3a_original.jpg?v=1d38c1c2');}
-    25%  { background-image: url('https://design.laiehu.com/assets/images/gallery01/235bdd99_original.jpg?v=1d38c1c2');}
-	30%  { background-image: url('https://design.laiehu.com/assets/images/gallery01/82e5542d_original.jpg?v=1d38c1c2'); }
-    35%  { background-image: url('https://design.laiehu.com/assets/images/gallery01/09e17e2a_original.jpg?v=1d38c1c2');}
-    40%  { background-image: url('https://design.laiehu.com/assets/images/gallery01/a14b4e43_original.jpg?v=1d38c1c2');}
-    50%  { background-image: url('https://design.laiehu.com/assets/images/gallery01/07b4ae35_original.jpg?v=1d38c1c2');}
-    55%  { background-image: url('https://design.laiehu.com/assets/images/gallery01/5318ae86_original.jpg?v=1d38c1c2');}
-    60%  { background-image: url('https://design.laiehu.com/assets/images/gallery01/5cae5d30_original.jpg?v=1d38c1c2');}
-    65%  { background-image: url('https://design.laiehu.com/assets/images/gallery01/6907728c_original.jpg?v=1d38c1c2');}
-    70%  { background-image: url('https://design.laiehu.com/assets/images/gallery01/1af6c4b8_original.jpg?v=1d38c1c2');}
-    75%  { background-image: url('https://design.laiehu.com/assets/images/gallery01/833d10a0_original.jpg?v=1d38c1c2');}
-	80%  { background-image: url('https://design.laiehu.com/assets/images/gallery01/d9279c5c_original.jpg?v=1d38c1c2'); }
-	85%  { background-image: url('https://design.laiehu.com/assets/images/gallery01/18655fae.jpg?v=1d38c1c2'); }
-	90%  { background-image: url('https://design.laiehu.com/assets/images/gallery01/4ed99faf.jpg?v=1d38c1c2'); }
-	95%  { background-image: url('https://design.laiehu.com/assets/images/gallery01/ac40839c.jpg?v=1d38c1c2'); }
-    100%  { background-image: url('https://design.laiehu.com/assets/images/gallery01/c517a5f2.jpg?v=1d38c1c2');}
+	0%   { content: url('https://design.laiehu.com/assets/images/gallery01/47fdcae1_original.jpg?v=1d38c1c2'); } 
+	15%  { content: url('https://design.laiehu.com/assets/images/gallery01/215e6f7b_original.jpg?v=1d38c1c2'); }
+	20%  { content: url('https://design.laiehu.com/assets/images/gallery01/66869e3a_original.jpg?v=1d38c1c2');}
+    25%  { content: url('https://design.laiehu.com/assets/images/gallery01/235bdd99_original.jpg?v=1d38c1c2');}
+	30%  { content: url('https://design.laiehu.com/assets/images/gallery01/82e5542d_original.jpg?v=1d38c1c2'); }
+    35%  { content: url('https://design.laiehu.com/assets/images/gallery01/09e17e2a_original.jpg?v=1d38c1c2');}
+    40%  { content: url('https://design.laiehu.com/assets/images/gallery01/a14b4e43_original.jpg?v=1d38c1c2');}
+    50%  { content: url('https://design.laiehu.com/assets/images/gallery01/07b4ae35_original.jpg?v=1d38c1c2');}
+    55%  { content: url('https://design.laiehu.com/assets/images/gallery01/5318ae86_original.jpg?v=1d38c1c2');}
+    60%  { content: url('https://design.laiehu.com/assets/images/gallery01/5cae5d30_original.jpg?v=1d38c1c2');}
+    65%  { content: url('https://design.laiehu.com/assets/images/gallery01/6907728c_original.jpg?v=1d38c1c2');}
+    70%  { content: url('https://design.laiehu.com/assets/images/gallery01/1af6c4b8_original.jpg?v=1d38c1c2');}
+    75%  { content: url('https://design.laiehu.com/assets/images/gallery01/833d10a0_original.jpg?v=1d38c1c2');}
+	80%  { content: url('https://design.laiehu.com/assets/images/gallery01/d9279c5c_original.jpg?v=1d38c1c2'); }
+	85%  { content: url('https://design.laiehu.com/assets/images/gallery01/18655fae.jpg?v=1d38c1c2'); }
+	90%  { content: url('https://design.laiehu.com/assets/images/gallery01/4ed99faf.jpg?v=1d38c1c2'); }
+	95%  { content: url('https://design.laiehu.com/assets/images/gallery01/ac40839c.jpg?v=1d38c1c2'); }
+    100%  { content: url('https://design.laiehu.com/assets/images/gallery01/c517a5f2.jpg?v=1d38c1c2');}
 }
+
+
 /* 
-
-*/
-
-
 .panel > h3 {
     font-weight: bolder;
     font-size: 7;
@@ -214,6 +193,9 @@ body section div {
     width: 100%;
 }
 
+
+*/
+
 @media screen and (min-width: 500px) {
     nav {
         position: absolute;
@@ -230,36 +212,29 @@ body section div {
         -ms-box-shadow: 0 4px 12px 0 rgba(0,0,0,.05);
         box-shadow: 0 4px 12px 0 rgb(0 0 0 / 5%);
         z-index: 100;
-
-    #section3 {
-        display: grid;
-        grid-template-columns: minmax(30%, 1fr) minmax(min-content, 94rem) minmax(30%, 1fr);
-        row-gap: 3rem;
-        column-gap: 3rem;
-        align-items: center;
     }
-
 }
+
 
 @media screen and (max-width: 500px) {
     body section header img {
         display: none;
     }    
 
-    nav {
-        position: absolute;
+    body section header nav {
         top: 7px;
-        right: 0;
-        left: 1vw;
+        left: 0px;
         display: block;
         place-items: center;
         height: 64px;
         width: 100%;
-        margin: 0 auto;
+        margin-left: 0px;
+        padding-bottom: 3vh;
 
         -webkit-box-shadow: 0 4px 12px 0 rgb(0 0 0 / 5%);
         -moz-box-shadow: 0 4px 12px 0 rgba(0,0,0,.05);
         -ms-box-shadow: 0 4px 12px 0 rgba(0,0,0,.05);
         box-shadow: 0 4px 12px 0 rgb(0 0 0 / 5%);
         z-index: 100;
+    }
 }
